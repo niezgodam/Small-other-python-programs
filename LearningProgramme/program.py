@@ -5,20 +5,20 @@ with open("pytania_odpowiedzi.txt", "r", encoding="utf-8") as f:
     lines = f.readlines()
 
 
-pytania = lines[0::2]  
-odpowiedzi = lines[1::2]  
+questions = lines[0::2]  
+answers = lines[1::2]  
 
-for i in range(len(pytania)):
+for i in range(len(questions)):
 
-    index = random.randint(0, len(pytania)-1)
-    pytanie = pytania[index]
+    index = random.randint(0, len(questions)-1)
+    pytanie = questions[index]
 
 
     input(f"{pytanie.strip()}")
 
-    odpowiedz = odpowiedzi[index]
+    odpowiedz = answers[index]
     print(odpowiedz.strip())
     print("")
-    odpowiedzi.pop(index)
+    answers.pop(index)
 
-    pytania.pop(index)
+    questions.pop(index)
