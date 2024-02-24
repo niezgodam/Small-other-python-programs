@@ -45,7 +45,7 @@ def player_choice():
             last_pick = "Scissors"
     else:
         print("You must enter a digit number between 1-3")
-        start_game()
+        display_menu()
 
 
 def display_choices():
@@ -73,15 +73,12 @@ def show_rules():
     The user selects one of three options: rock, paper, or scissors.
     After the user's selection, the program waits for 2 seconds.
     The computer automatically chooses one of three options: rock, paper, or scissors.
-    Compare the choices:
-    Rock crushes scissors, so rock wins against scissors.
-    Scissors cuts paper, so scissors wins against paper.
-    Paper covers rock, so paper wins against rock.
     If both the user and the computer choose the same item, it's a tie.
     Declare the winner or if it's a tie.
     Allow for replaying the game.
     """
     print(text)
+    display_menu()
 
 def exit_game():
     print("Application has been closed")
